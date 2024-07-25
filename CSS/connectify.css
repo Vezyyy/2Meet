@@ -1,173 +1,330 @@
-/* Reset podstawowy */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+}
+
+.logo {
+    max-width: 140px;
+    border-radius: 15px; /* Zaokrąglenie rogów logo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Cień dla logo */
+    margin-left: 20px; /* Odstęp od lewej krawędzi */
+    animation: pulse 2s infinite; /* Dodanie animacji pulsowania */
+}
+
+
+/* Resetowanie marginesów i paddingów */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Ogólny styl */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
-}
-
-/* Nagłówek */
-header {
-    background: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #fff;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
+    background-color: #1a1a1a;
 }
 
-header .container {
+/* Header */
+header {
+    background-color: #e50914; /* Czerwony kolor */
+    padding: 15px 20px; /* Dodano padding z lewej i prawej strony */
+    color: #fff;
+    position: relative;
+}
+
+.logo-nav-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
 }
 
-header .logo {
-    max-width: 120px;
+.logo {
+    max-width: 140px;
+    border-radius: 15px; /* Zaokrąglenie rogów logo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Cień dla logo */
+    margin-left: 20px; /* Odstęp od lewej krawędzi */
 }
 
-nav ul {
+nav {
+    position: relative;
+}
+
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 1.5em;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.nav-toggle:hover {
+    color: #ffeb3b; /* Kolor ikony przy najechaniu */
+}
+
+.nav-toggle-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 20px;
     list-style: none;
 }
 
-nav ul li {
-    display: inline;
-    margin-right: 15px;
+.nav-menu li {
+    margin: 0;
 }
 
-nav ul li a {
+.nav-menu a {
     color: #fff;
     text-decoration: none;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    padding: 10px;
+    border-radius: 8px;
 }
 
-/* Sekcja hero */
+.nav-menu a:hover {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Hero Section */
 .hero {
-    background: url('../images/hero-bg.jpg') no-repeat center center/cover;
+    background-image: url('../IMAGES/hero-bg.jpg'); /* Dodaj własne tło */
+    background-size: cover;
+    background-position: center;
     color: #fff;
     text-align: center;
     padding: 100px 20px;
+    position: relative;
+    overflow: hidden;
 }
 
-.hero-content {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.hero h1 {
-    font-size: 3em;
+.hero-content h1 {
+    font-size: 3.5em;
     margin-bottom: 20px;
+    font-weight: 700;
 }
 
-.hero p {
-    font-size: 1.2em;
+.hero-content p {
+    font-size: 1.3em;
     margin-bottom: 30px;
+    line-height: 1.5;
 }
 
 .btn-primary {
-    background: #007bff;
+    background-color: #e50914;
     color: #fff;
-    padding: 10px 20px;
+    padding: 15px 30px;
     text-decoration: none;
-    border-radius: 5px;
-    font-size: 1.2em;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .btn-primary:hover {
-    background: #0056b3;
+    background-color: #b7082f;
+    transform: scale(1.05);
 }
 
-/* Sekcja funkcji */
+/* Features Section */
 .features {
     padding: 60px 20px;
-    background: #fff;
+    background-color: #2c2c2c;
 }
 
-.features .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+.features .feature {
+    margin-bottom: 40px;
+    padding: 30px;
+    background-color: #3d3d3d;
+    border-radius: 15px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.feature {
-    flex: 1 1 30%;
-    margin: 10px;
-    background: #f4f4f4;
-    padding: 20px;
-    border-radius: 5px;
-    text-align: center;
-}
-
-.feature img {
-    max-width: 100%;
+.features .feature img {
+    width: 100%;
     height: auto;
-    border-radius: 5px;
-}
-
-.feature h2 {
-    margin-top: 10px;
-    font-size: 1.5em;
-}
-
-.feature p {
-    font-size: 1em;
-    color: #666;
-}
-
-/* Sekcja CTA */
-.cta {
-    background: #007bff;
-    color: #fff;
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.cta h2 {
-    font-size: 2em;
+    border-radius: 15px;
     margin-bottom: 20px;
 }
 
-.cta p {
-    font-size: 1.2em;
-    margin-bottom: 30px;
+.features h2 {
+    color: #e50914;
+    margin-bottom: 15px;
+    font-size: 1.8em;
 }
 
-.btn-secondary {
-    background: #fff;
-    color: #007bff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 1.2em;
+.features .feature:hover {
+    background-color: #4d4d4d;
+    transform: translateY(-5px);
 }
 
-.btn-secondary:hover {
-    background: #e9ecef;
-}
-
-/* Stopka */
-footer {
-    background: #333;
+/* CTA Section */
+.cta {
+    background-color: #e50914;
     color: #fff;
     text-align: center;
-    padding: 20px 0;
+    padding: 60px 20px;
 }
 
-footer p {
-    margin-bottom: 10px;
+.cta a {
+    background-color: #fff;
+    color: #e50914;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta a:hover {
+    background-color: #f5f5f5;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background-color: #2c2c2c;
+    color: #ccc;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 footer a {
-    color: #fff;
+    color: #e50914;
     text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.social-media {
+    margin-top: 20px;
+}
+
+.social-media a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-media img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        background-color: #e50914;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 250px;
+        border-radius: 10px;
+        padding: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-menu.active {
+        display: flex;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .nav-toggle-icon {
+        font-size: 1.5em;
+    }
+
+    .nav-toggle-icon::before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+
+    .nav-toggle-icon::after {
+        transform: rotate(-45deg);
+        top: 0;
+    }
+}
+
+
+/* Mobile Menu */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        background-color: #e50914;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 250px;
+        border-radius: 10px;
+        padding: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-menu.active {
+        display: flex;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .nav-toggle-icon {
+        font-size: 1.5em;
+    }
+
+    .nav-toggle-icon::before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+
+    .nav-toggle-icon::after {
+        transform: rotate(-45deg);
+        top: 0;
+    }
 }

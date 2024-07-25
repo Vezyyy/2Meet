@@ -1,0 +1,173 @@
+/* Reset podstawowy */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Ogólny styl */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Nagłówek */
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header .logo {
+    max-width: 120px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Sekcja hero */
+.hero {
+    background: url('../images/hero-bg.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.btn-primary {
+    background: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+}
+
+.btn-primary:hover {
+    background: #0056b3;
+}
+
+/* Sekcja funkcji */
+.features {
+    padding: 60px 20px;
+    background: #fff;
+}
+
+.features .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.feature {
+    flex: 1 1 30%;
+    margin: 10px;
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.feature img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.feature h2 {
+    margin-top: 10px;
+    font-size: 1.5em;
+}
+
+.feature p {
+    font-size: 1em;
+    color: #666;
+}
+
+/* Sekcja CTA */
+.cta {
+    background: #007bff;
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.cta h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.cta p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.btn-secondary {
+    background: #fff;
+    color: #007bff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+}
+
+.btn-secondary:hover {
+    background: #e9ecef;
+}
+
+/* Stopka */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}

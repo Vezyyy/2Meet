@@ -610,7 +610,6 @@ footer a:hover {
     margin-bottom: 40px;
     padding: 20px;
     background-color: #ffffff;
-    border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -651,4 +650,40 @@ footer a:hover {
 .team-member p[style*="color: red;"] {
     color: #e74c3c;
     font-weight: bold;
+}
+
+/* Sekcja aplikacji */
+.application-header {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #333;
+}
+
+.application-header h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.application-header p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+iframe {
+    width: 100%;
+    height: 80vh; /* Adjust the height as needed */
+    border: none;
+    margin: 0 auto;
+    display: block;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .application-header h1 {
+        font-size: 2em;
+    }
+
+    .application-header p {
+        font-size: 1em;
+    }
 }

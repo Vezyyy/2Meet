@@ -468,3 +468,187 @@ footer a:hover {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+
+/* ******************************************************************************************* */
+/* O nas */
+/* ******************************************************************************************* */
+
+/* Nagłówek strony O nas */
+.about-header {
+    background: #333; /* Ciemny szary background */
+    color: #fff;
+    text-align: center;
+    padding: 120px 20px;
+    position: relative;
+}
+
+.about-header h1 {
+    font-size: 4em;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.about-header p {
+    font-size: 1.4em;
+    margin: 0 auto 30px auto;
+    line-height: 1.6;
+    max-width: 800px;
+    padding: 0 10px;
+}
+
+/* Sekcje O nas */
+.about-section {
+    padding: 80px 20px;
+    background-color: #f4f4f4; /* Jasny szary background */
+    color: #333;
+    text-align: center;
+}
+
+.about-section h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #000; /* Czarny tekst */
+}
+
+.about-section p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    margin: 0 auto 40px auto;
+    max-width: 900px;
+    padding: 0 15px;
+}
+
+/* Sekcja zespołu */
+.team {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 40px 20px;
+    background-color: #f4f4f4; /* Jasny szary background */
+}
+
+.team-member {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    flex: 1;
+    max-width: 320px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.team-member img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 4px solid #333; /* Ciemnoszare obramowanie */
+}
+
+.team-member h3 {
+    font-size: 1.6em;
+    margin-bottom: 10px;
+    color: #000; /* Czarny tekst */
+}
+
+.team-member p {
+    font-size: 1.1em;
+    color: #666; /* Ciemnoszary tekst */
+}
+
+/* Sekcja kontaktowa */
+.contact {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #333; /* Ciemny szary background */
+    color: #fff;
+}
+
+.contact h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-size: 1.2em;
+    margin: 0 auto 30px auto;
+    max-width: 800px;
+    padding: 0 15px;
+}
+
+.contact a {
+    background-color: #fff;
+    color: #333; /* Ciemnoszary tekst */
+    padding: 14px 28px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+.contact a:hover {
+    background-color: #f5f5f5; /* Bardziej szary background przy hoverze */
+    transform: scale(1.05);
+}
+
+/* Stylizacja sekcji zespołu */
+
+.Staff{
+    width: 100%;
+}
+
+.team {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.team h2 {
+    font-size: 28px;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.team-member {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 4px solid #3498db; /* Opcjonalne: dodaje obramowanie do zdjęć */
+}
+
+.team-member h3 {
+    font-size: 22px;
+    margin: 10px 0;
+    color: #2c3e50;
+}
+
+.team-member p {
+    font-size: 16px;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.team-member p[style*="color: red;"] {
+    color: #e74c3c;
+    font-weight: bold;
+}

@@ -46,3 +46,43 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+/* ******************************************************************************************* */
+/* Copy Discord Tag Script */
+/* ******************************************************************************************* */
+
+function copyDiscordTag(tag) {
+    const tempInput = document.createElement('input');
+    document.body.appendChild(tempInput);
+    tempInput.value = tag;
+    tempInput.select();
+    document.execCommand('copy');
+    document.body.removeChild(tempInput);
+    openModal();
+}
+
+function openModal() {
+    const modal = document.getElementById('myModal');
+    modal.style.display = 'flex'; // Użyj flexbox, aby wyśrodkować modal
+}
+
+function closeModal() {
+    const modal = document.getElementById('myModal');
+    modal.style.display = 'none';
+}
+
+window.onclick = function(event) {
+    const modal = document.getElementById('myModal');
+    if (event.target === modal) {
+        modal.style.display = 'none';
+    }
+}
+
+window.addEventListener('load', function () {
+    const preloader = document.getElementById('preloader');
+    preloader.style.opacity = '0';
+    preloader.style.transition = 'opacity 0.5s ease-out';
+    setTimeout(() => {
+        preloader.style.display = 'none';
+    }, 500); // Dopasuj czas do długości animacji
+});

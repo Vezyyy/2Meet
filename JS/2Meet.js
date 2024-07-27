@@ -23,3 +23,26 @@ window.addEventListener('load', function () {
         preloader.style.display = 'none';
     }, 500); // Dopasuj czas do długości animacji
 });
+
+/* ******************************************************************************************* */
+/* Roll Back Script */
+/* ******************************************************************************************* */
+
+document.addEventListener('DOMContentLoaded', () => {
+    const backToTopButton = document.getElementById('backToTop');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) { // Pokaż przycisk po przewinięciu 300px
+            backToTopButton.style.display = 'block';
+        } else {
+            backToTopButton.style.display = 'none';
+        }
+    });
+
+    backToTopButton.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+});

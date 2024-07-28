@@ -86,3 +86,23 @@ window.addEventListener('load', function () {
         preloader.style.display = 'none';
     }, 500); // Dopasuj czas do długości animacji
 });
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Get the container that holds the posts
+    const postsContainer = document.querySelector('.posts');
+
+    // Function to update the post count
+    const updatePostCount = () => {
+        const postCount = postsContainer.querySelectorAll('.post').length;
+        document.getElementById('post-count').textContent = postCount;
+    };
+
+    // Initial update of the post count when the page loads
+    updatePostCount();
+});
+

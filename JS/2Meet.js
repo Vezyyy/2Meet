@@ -87,10 +87,30 @@ window.addEventListener('load', function () {
     }, 500); // Dopasuj czas do długości animacji
 });
 
+/* ******************************************************************************************* */
+/* Read More, Less Script */
+/* ******************************************************************************************* */
+
+function toggleExpand(element) {
+    element.classList.toggle('expanded');
+    const toggleText = element.querySelector('.text');
+    const clickIcon = element.querySelector('.click-icon');
+
+    if (element.classList.contains('expanded')) {
+        toggleText.textContent = "Click To Read Less";
+        clickIcon.classList.remove('fa-chevron-down');
+        clickIcon.classList.add('fa-chevron-up');
+    } else {
+        toggleText.textContent = "Click To Read More";
+        clickIcon.classList.remove('fa-chevron-up');
+        clickIcon.classList.add('fa-chevron-down');
+    }
+}
 
 
-
-
+/* ******************************************************************************************* */
+/* Post Count Script */
+/* ******************************************************************************************* */
 
 document.addEventListener('DOMContentLoaded', () => {
     // Get the container that holds the posts

@@ -183,6 +183,34 @@ nav {
 }
 
 /* Features Section */
+
+.feature-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.feature-link:visited {
+    color: inherit;
+}
+
+.feature-link:hover {
+    text-decoration: none;
+}
+
+.feature-link .feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1em;
+    transition: transform 0.3s;
+}
+
+.feature-link .feature:hover {
+    transform: scale(1.05);
+}
+
 .features {
     padding: 60px 20px;
     background-color: #2c2c2c;
@@ -356,6 +384,58 @@ footer a:hover {
 /* Post Website */
 /* ******************************************************************************************* */
 
+.post-content.more {
+    display: none;
+}
+
+.post.expanded .post-content.more {
+    display: block;
+}
+
+.post.expanded .post-content.less {
+    display: none;
+}
+
+.post {
+    cursor: pointer;
+}
+
+.toggle-text {
+    text-align: center;
+    color: #007bff;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+
+.click-icon {
+    font-size: 18px; /* Rozmiar ikony */
+    margin-right: 5px;
+    transition: transform 0.3s ease; /* Dodaj płynne przejście */
+}
+
+.blink-animation {
+    animation: blink-animation 1s infinite;
+}
+
+@keyframes blink-animation {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.5;
+        transform: scale(1.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
 .posts{
     background-color: white;
 }
@@ -425,6 +505,15 @@ footer a:hover {
     display: flex;
     justify-content: flex-end;
     gap: 15px;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .post-footer {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
 }
 
 /* Style for button links */
@@ -536,6 +625,7 @@ footer a:hover {
 .MeetStaff {
     font-weight: bold;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 1em;
 }
 
 /* ******************************************************************************************* */

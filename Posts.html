@@ -50,14 +50,21 @@
     <main>
         <section class="posts">
             <div class="container">
-                <h1>Posty</h1>
+                <h1>2Meet™ Posty</h1>
+
+                <div class="line"></div>
+
+                <!-- Search Box -->
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="Wyszukaj posty...">
+                </div>
 
                 <div class="line"></div>
 
                 <section class="posts">
 
                     <div id="post-counter">
-                        <i class="fas fa-list"></i> Liczba postów: <span id="post-count">0</span>
+                        <i class="fas fa-list"></i> Ogólna Liczba Postów: <span id="post-count">0</span>
                     </div>
 
                     <!-- ############################################################################################################# -->
@@ -66,7 +73,7 @@
                     <!-- TUTAJ DOKLEJANMY POSTY OD GÓRY! -->
 
                     <!-- ---------------------------------------------------------------------- -->
-                    <div class="post" onclick="toggleExpand(this)">
+                    <div class="post" data-name="Anna Kowalska" data-time="14:30" data-date="28.07.2024" onclick="toggleExpand(this)">
                         <div class="post-header">
                             <img src="IMAGES/2Meet/2Meet.png" alt="Avatar" class="avatar">
                             <div>
@@ -118,16 +125,16 @@
                     <!-- ---------------------------------------------------------------------- -->
 
                     <!-- ---------------------------------------------------------------------- -->
-                    <div class="post" onclick="toggleExpand(this)">
+                    <div class="post" data-name="Bartek Pedrowski" data-time="18:30" data-date="29.07.2024" onclick="toggleExpand(this)">
                         <div class="post-header">
                             <img src="IMAGES/2Meet/2Meet.png" alt="Avatar" class="avatar">
                             <div>
                                 <!-- Imię -->
-                                <h2>Anna Kowalska</h2>
+                                <h2>Bartek Pedrowski</h2>
                                 <!-- Godzina Wysłania -->
-                                <p><i class="fas fa-clock"></i> Godzina: 14:30</p>
+                                <p><i class="fas fa-clock"></i> Godzina: 18:30</p>
                                 <!-- Data Wysłania -->
-                                <p><i class="fas fa-calendar-alt"></i> Data: 28.07.2024</p>
+                                <p><i class="fas fa-calendar-alt"></i> Data: 29.07.2024</p>
                             </div>
                         </div>
                         <!-- Informacje o Sobie -->
@@ -170,68 +177,16 @@
                     <!-- ---------------------------------------------------------------------- -->
 
                     <!-- ---------------------------------------------------------------------- -->
-                    <div class="post" onclick="toggleExpand(this)">
+                    <div class="post" data-name="Cytryndor Dupczewski" data-time="18:30" data-date="29.07.2024" onclick="toggleExpand(this)">
                         <div class="post-header">
                             <img src="IMAGES/2Meet/2Meet.png" alt="Avatar" class="avatar">
                             <div>
                                 <!-- Imię -->
-                                <h2>Anna Kowalska</h2>
+                                <h2>Cytryndor0 Dupczewski</h2>
                                 <!-- Godzina Wysłania -->
-                                <p><i class="fas fa-clock"></i> Godzina: 14:30</p>
+                                <p><i class="fas fa-clock"></i> Godzina: 18:30</p>
                                 <!-- Data Wysłania -->
-                                <p><i class="fas fa-calendar-alt"></i> Data: 28.07.2024</p>
-                            </div>
-                        </div>
-                        <!-- Informacje o Sobie -->
-                        <div class="post-content less">
-                            <p><i class="fas fa-user"></i> O Mnie:</p>
-                            <p>Cześć! Nazywam się Anna i jestem pasjonatką podróży, fotografii oraz gotowania. Uwielbiam
-                                odkrywać nowe miejsca i poznawać ciekawych ludzi.</p>
-                        </div>
-                        <div class="post-content more">
-                            <!-- Dodatkowe Informacje -->
-                            <p><i class="fas fa-info-circle"></i> Dodatkowe Informacje:</p>
-                            <p>Szukam osób, które podzielają moje zainteresowania i chcą wspólnie organizować wyjazdy.
-                                Chętnie dzielę się swoimi przepisami kulinarnymi i fotografiami z podróży.</p>
-                        </div>
-                        <!-- LINE -->
-                        <div class="line"></div>
-                        <!-- Status Posta: Zweryfikowany -->
-                        <div class="verified-status">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Status Postu: Zweryfikowany</span>
-                        </div>
-                        <!-- 2Meet™ Stopka -->
-                        <p class="MeetStaff">
-                            <i class="fas fa-headset"></i> 2Meet™ Support
-                        </p>
-                        <div class="post-footer">
-                            <a href="#" class="btn-link" onclick="copyDiscordTag('AnnaK#5678')">
-                                <i class="fas fa-comment icon"></i> Dodaj mnie na Discordzie
-                            </a>
-                            <a target="_blank" href="https://discord.gg/U276WaAttM" class="btn-link">
-                                <i class="fab fa-discord icon"></i> 2Meet Discord
-                            </a>
-                        </div>
-                        <!-- TOGGLE READ MORE BTN -->
-                        <p class="toggle-text">
-                            <i class="fas fa-chevron-down click-icon blink-animation"></i>
-                            <span class="text blink-animation click-icon">Click To Read More</span>
-                        </p>
-                    </div>
-                    <!-- ---------------------------------------------------------------------- -->
-
-                    <!-- ---------------------------------------------------------------------- -->
-                    <div class="post" onclick="toggleExpand(this)">
-                        <div class="post-header">
-                            <img src="IMAGES/2Meet/2Meet.png" alt="Avatar" class="avatar">
-                            <div>
-                                <!-- Imię -->
-                                <h2>Anna Kowalska</h2>
-                                <!-- Godzina Wysłania -->
-                                <p><i class="fas fa-clock"></i> Godzina: 14:30</p>
-                                <!-- Data Wysłania -->
-                                <p><i class="fas fa-calendar-alt"></i> Data: 28.07.2024</p>
+                                <p><i class="fas fa-calendar-alt"></i> Data: 29.07.2024</p>
                             </div>
                         </div>
                         <!-- Informacje o Sobie -->

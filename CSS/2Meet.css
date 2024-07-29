@@ -384,6 +384,53 @@ footer a:hover {
 /* Post Website */
 /* ******************************************************************************************* */
 
+/* Style dla kontenera paska wyszukiwania */
+.search-box {
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%; /* Maksymalna szerokość paska wyszukiwania */
+    position: fixed; /* Pozycjonowanie względne dla lepszego dostosowania */
+    z-index: 111111;
+}
+
+/* Style dla pola wyszukiwania */
+.search-box input {
+    flex: 1; /* Umożliwia polu wyszukiwania zajmowanie dostępnej przestrzeni */
+    padding: 12px 15px; /* Większe paddingi dla lepszego komfortu użytkowania */
+    border: 1px solid #ccc;
+    border-radius: 30px 30px 30px 30px; /* Zaokrąglone narożniki */
+    font-size: 16px;
+    outline: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtelny cień dla efektu głębi */
+    transition: box-shadow 0.3s ease, border-color 0.3s ease; /* Animacje */
+}
+
+.search-box input:focus {
+    border-color: #007BFF; /* Zmiana koloru obramowania podczas fokusu */
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2); /* Zwiększenie cienia podczas fokusu */
+}
+
+
+/* Styl dla efektu migania na czerwono */
+.flash {
+    animation: flash-red 0.5s ease-out;
+}
+
+/* Definicja animacji migania na czerwono */
+@keyframes flash-red {
+    0% {
+        background-color: rgba(255, 0, 0, 0.2); /* Jasnoczerwony kolor tła */
+    }
+    50% {
+        background-color: rgba(255, 0, 0, 0.5); /* Intensywniejszy czerwony */
+    }
+    100% {
+        background-color: transparent; /* Powrót do przezroczystości */
+    }
+}
+
 .post-content.more {
     display: none;
 }
@@ -709,6 +756,14 @@ footer a:hover {
     text-align: center;
 }
 
+.about-section p {
+    font-size: 1.4em;
+    margin: 0 auto 30px auto;
+    line-height: 1.6;
+    max-width: 800px;
+    padding: 0 10px;
+}
+
 .about-section h2 {
     font-size: 3em;
     margin-bottom: 20px;
@@ -716,12 +771,83 @@ footer a:hover {
     /* Czarny tekst */
 }
 
-.about-section p {
-    font-size: 1.2em;
-    line-height: 1.8;
-    margin: 0 auto 40px auto;
-    max-width: 900px;
-    padding: 0 15px;
+/* Sekcja Wyróżnienia */
+
+.features {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 40px 20px;
+    background: #333;
+}
+
+.features h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.features-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.features-list li {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: large;
+    margin: 10px;
+    padding: 20px;
+    flex: 1 1 calc(33.333% - 40px);
+    max-width: calc(33.333% - 40px);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.features-list li:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.features-list li i {
+    font-size: 3em;
+    margin-bottom: 15px;
+    color: #1225ce;
+}
+
+.features-list li strong {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+.features-list li p {
+    font-size: 1em;
+    margin: 0;
+    color: #666;
+}
+
+/* Ensure responsiveness */
+@media (max-width: 768px) {
+    .features-list li {
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .features-list li {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
 }
 
 /* Sekcja zespołu */
@@ -772,6 +898,14 @@ footer a:hover {
     color: #666;
     /* Ciemnoszary tekst */
 }
+
+.team h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #000;
+    text-align: center;
+}
+
 
 /* Sekcja kontaktowa */
 .contact {

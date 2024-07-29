@@ -386,12 +386,16 @@ footer a:hover {
 
 /* Style dla kontenera paska wyszukiwania */
 .search-box {
-    margin: 20px auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 100%; /* Maksymalna szerokość paska wyszukiwania */
     position: fixed; /* Pozycjonowanie względne dla lepszego dostosowania */
+    bottom: 20px; /* Odstęp od dolnej krawędzi ekranu */
+    left: 50%; /* Przyklejenie do środka ekranu */
+    transform: translateX(-50%); /* Przesunięcie w lewo o połowę szerokości */
+    width: 80%; /* Domyślna szerokość na 80% ekranu */
+    max-width: 1200px; /* Maksymalna szerokość kontenera (opcjonalne) */
+    box-sizing: border-box; /* Uwzględnia padding i border w szerokości */
     z-index: 111111;
 }
 
@@ -400,11 +404,12 @@ footer a:hover {
     flex: 1; /* Umożliwia polu wyszukiwania zajmowanie dostępnej przestrzeni */
     padding: 12px 15px; /* Większe paddingi dla lepszego komfortu użytkowania */
     border: 1px solid #ccc;
-    border-radius: 30px 30px 30px 30px; /* Zaokrąglone narożniki */
+    border-radius: 30px; /* Zaokrąglone narożniki */
     font-size: 16px;
     outline: none;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtelny cień dla efektu głębi */
     transition: box-shadow 0.3s ease, border-color 0.3s ease; /* Animacje */
+    width: 100%; /* Szerokość pola wyszukiwania na cały dostępny obszar */
 }
 
 .search-box input:focus {
@@ -412,6 +417,12 @@ footer a:hover {
     box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2); /* Zwiększenie cienia podczas fokusu */
 }
 
+/* Style dla telefonów */
+@media (max-width: 767px) {
+    .search-box {
+        width: 60%; /* Szerokość na 60% ekranu dla telefonów */
+    }
+}
 
 /* Styl dla efektu migania na czerwono */
 .flash {

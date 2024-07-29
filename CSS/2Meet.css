@@ -827,6 +827,7 @@ footer a:hover {
 .features-list li strong {
     font-size: 1.4em;
     margin-bottom: 10px;
+    color: rgb(24, 51, 175);
 }
 
 .features-list li p {

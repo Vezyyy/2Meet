@@ -39,9 +39,9 @@
 
 /* Stylizacja logo */
 .Logo2Meet {
-    width: 10em;
+    width: 15em;
     /* Szerokość logo */
-    height: 10em;
+    height: 15em;
     /* Wysokość logo */
 }
 
@@ -116,6 +116,7 @@ nav {
     display: flex;
     gap: 20px;
     list-style: none;
+    z-index: 1000;
 }
 
 .nav-menu li {
@@ -355,7 +356,7 @@ footer a:hover {
 }
 
 .nav-menu a:hover {
-    color: #ffeb3b;
+    color: #3b6fff;
 }
 
 /* Responsywność */
@@ -396,7 +397,7 @@ footer a:hover {
     width: 80%; /* Domyślna szerokość na 80% ekranu */
     max-width: 1200px; /* Maksymalna szerokość kontenera (opcjonalne) */
     box-sizing: border-box; /* Uwzględnia padding i border w szerokości */
-    z-index: 111111;
+    z-index: 999;
     opacity: 0.5;
     transition: opacity 0.3s ease; /* Dodanie płynnego przejścia */
 }
@@ -613,7 +614,7 @@ footer a:hover {
 }
 
 .btn-link:hover i.icon {
-    color: #ffeb3b;
+    color: #ffffff;
     /* Icon color on hover */
 }
 
